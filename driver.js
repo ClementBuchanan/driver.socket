@@ -19,15 +19,14 @@ capsConnection.on('in-transit', delivered);
 //   delivered();
 // }
 
-
+//step 3
 function pickUp(payload) {
   setTimeout(() => {
     console.log(`DRIVER: picked up ${payload.orderId}`)
     capsConnection.emit('in-transit', payload)
   }, 1000)
 }
-
-
+//Step 5
 function delivered(payload) {
   setTimeout(() => {
     console.log(`DRIVER: delivered ${payload.orderId}`);
